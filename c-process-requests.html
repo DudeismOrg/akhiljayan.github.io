@@ -19,11 +19,11 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-    <style type="text/css">
-        .badge{
-            margin-right:10px;
-        }
-    </style>
+        <style type="text/css">
+            .badge{
+                margin-right:10px;
+            }
+        </style>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -176,7 +176,7 @@
                             </a>
                         </li>
                         <li class="header">Department</li>
-                        <li class="active treeview">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-pie-chart"></i>
                                 <span>Employees</span>
@@ -200,7 +200,7 @@
                                         </span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="e-rejected-request.html" title="View all Rejected Requests">
                                         <i class="fa fa-circle-o"></i> 
                                         <span>Rejected Requests</span>
@@ -215,7 +215,7 @@
                                         <span>Request History</span>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li>
                                     <a href="e-track-outstanding.html" title="Track any outstatnging items yet to be deliverd">
                                         <i class="fa fa-circle-o"></i> 
                                         <span>Track Outstanding</span>
@@ -280,7 +280,7 @@
                             </ul>
                         </li>
                         <li class="header">Store</li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-pie-chart"></i>
                                 <span>Clerk</span>
@@ -358,11 +358,11 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Outstanding Items
+                        Process Requests
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                        <li class="active">Pending Approval</li>
+                        <li class="active">Pending Requests</li>
                     </ol>
                 </section>
 
@@ -396,95 +396,110 @@
                                 <div class="box-body no-padding">
                                     <table class="table">
                                         <tbody><tr>
+                                                <th style="width: 10px"><input type="checkbox"></th>
                                                 <th style="width: 10px">#</th>
-                                                <th>Item Category</th>
-                                                <th>Item Code</th>
-                                                <th>Item</th>
-                                                <th>Requested Quantity</th>
-                                                <th>Received Quantity</th>
-                                                <th>Request Form Number</th>
-                                                <th>Request Date</th>
-                                                <th>Quantity Pending</th>
-                                                <th style="width: 170px; text-align: right">Action</th>
+                                                <th>Request Number</th>
+                                                <th>Department</th>
+                                                <th>In Stock Status</th>
+                                                <th>Date</th>
+                                                <th style="width: 250px; text-align: right">Action</th>
                                             </tr>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td>1.</td>
-                                                <td>Clip</td>
-                                                <td>C0001</td>
-                                                <td>Item 1</td>
-                                                <td style="text-align:center">50</td>
-                                                <td style="text-align:center">40</td>
-                                                <td>#DD/FF/345</td>
+                                                <td>#DD/343/F01</td>
+                                                <td>Department 1</td>
+                                                <td>
+                                                    <div class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                                                    </div>
+                                                </td>
                                                 <td>
                                                     01-02-2017
                                                 </td>
-                                                <td><span class="badge bg-red">10 Units</span></td>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-primary">Notify Store</a>
-                                                    <a href="#" id="details1" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#details-modal">
-                                                        Details
-                                                    </a>
+                                                    <a href="#" data-toggle="modal" data-target="#details-modal" class="btn btn-sm btn-primary">View/Edit</a>
+                                                    <a href="#" class="btn btn-sm btn-warning">Send Note to Department</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td>2.</td>
-                                                <td>Clip</td>
-                                                <td>C0002</td>
-                                                <td>Item 2</td>
-                                                <td style="text-align:center">50</td>
-                                                <td style="text-align:center">40</td>
-                                                <td>#DD/FF/345</td>
+                                                <td>#DD/343/F01</td>
+                                                <td>Department 1</td>
+                                                <td>
+                                                    <div class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar progress-bar-success" style="width: 20%"></div>
+                                                    </div>
+                                                </td>
                                                 <td>
                                                     01-02-2017
                                                 </td>
-                                                <td><span class="badge bg-red">10 Units</span></td>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-primary">Notify Store</a>
-                                                    <a href="#" id="details2" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#details-modal">
-                                                        Details
-                                                    </a>
+                                                    <a href="#" data-toggle="modal" data-target="#details-modal" class="btn btn-sm btn-primary">View/Edit</a>
+                                                    <a href="#" class="btn btn-sm btn-warning">Send Note to Department</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td>3.</td>
-                                                <td>Clip</td>
-                                                <td>C0003</td>
-                                                <td>Item 3</td>
-                                                <td style="text-align:center">50</td>
-                                                <td style="text-align:center">40</td>
-                                                <td>#DD/FF/345</td>
+                                                <td>#DD/343/F01</td>
+                                                <td>Department 1</td>
+                                                <td>
+                                                    <div class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar progress-bar-success" style="width: 100%"></div>
+                                                    </div>
+                                                </td>
                                                 <td>
                                                     01-02-2017
                                                 </td>
-                                                <td><span class="badge bg-red">10 Units</span></td>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-primary">Notify Store</a>
-                                                    <a href="#" id="details3" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#details-modal">
-                                                        Details
-                                                    </a>
+                                                    <a href="#" data-toggle="modal" data-target="#details-modal" class="btn btn-sm btn-primary">View/Edit</a>
+                                                    <a href="#" class="btn btn-sm btn-warning">Send Note to Department</a>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td><input type="checkbox"></td>
                                                 <td>4.</td>
-                                                <td>Clip</td>
-                                                <td>C0004</td>
-                                                <td>Item 4</td>
-                                                <td style="text-align:center">50</td>
-                                                <td style="text-align:center">40</td>
-                                                <td>#DD/FF/345</td>
+                                                <td>#DD/324/F09</td>
+                                                <td>Department 2</td>
+                                                <td>
+                                                    <div class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar progress-bar-success" style="width: 50%"></div>
+                                                    </div>
+                                                </td>
                                                 <td>
                                                     01-02-2017
                                                 </td>
-                                                <td><span class="badge bg-red">10 Units</span></td>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-primary">Notify Store</a>
-                                                    <a href="#" id="details4" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#details-modal">
-                                                        Details
-                                                    </a>
+                                                    <a href="#" data-toggle="modal" data-target="#details-modal" class="btn btn-sm btn-primary">View/Edit</a>
+                                                    <a href="#" class="btn btn-sm btn-warning">Send Note to Department</a>
                                                 </td>
                                             </tr>
-                                            
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>5.</td>
+                                                <td>#DD/343/F01</td>
+                                                <td>Department 5</td>
+                                                <td>
+                                                    <div class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar progress-bar-success" style="width: 60%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    01-02-2017
+                                                </td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#details-modal" class="btn btn-sm btn-primary">View/Edit</a>
+                                                    <a href="#" class="btn btn-sm btn-warning">Send Note to Department</a>
+                                                </td>
+                                            </tr>
+
                                         </tbody></table>
+                                </div>
+                                <div class="box-footer" style="margin-top:20px">
+                                    <a class="btn btn-primary pull-right" style="margin-left:5px" href="#">View Total Request Item</a>
+                                    <a class="btn btn-success pull-right"  data-toggle="modal" data-target="#retrievel-modal" style="margin-right:5px" href="#">Generate Retrieval Form</a>
                                 </div>
                                 <!-- /.box-body -->
                             </div>
@@ -497,32 +512,11 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Request Detail</h4>
+                                <h4 class="modal-title" id="myModalLabel">Requested Items</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="col-md-12">
-                                    <div class="col-md-6">
-                                        <div class="pull-left" style="text-align: left">
-                                            <h5><u>Request form Number</u>: #Numb</h5>
-                                            <h5><u>Created Date</u>: dd-mm-yyyy</h5>
-                                            <h5><u>Created By</u>: Name</h5>
-                                            <h5><u>Status</u>: Approved/Rejected/Delivered</h5>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="pull-right" style="text-align: right">
-                                            <h5><u>Department</u>: Dept </h5><small>Dept code</small>
-                                            <h5><u>Approved by</u>: HOD Name</h5>
-                                            <h5><u>Approved Date</u>: dd-mm-yyyy</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12" style="height:10px"></div>
-                                <div class="col-md-12">
                                     <div class="box">
-                                        <div class="box-header">
-                                            <h3 class="box-title">Requested Items</h3>
-                                        </div>
                                         <!-- /.box-header -->
                                         <div class="box-body no-padding">
                                             <table class="table table-condensed">
@@ -532,7 +526,7 @@
                                                         <th>Category</th>
                                                         <th>Item</th>
                                                         <th>Qty</th>
-
+                                                        <th>Approved Qty</th>
                                                     </tr>
                                                     <tr>
                                                         <td>1.</td>
@@ -541,6 +535,9 @@
                                                         <td>Clip Double2</td>
                                                         <td>
                                                             <span class="badge bg-red">5 Units</span>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -551,6 +548,9 @@
                                                         <td>
                                                             <span class="badge bg-red">2 Units</span>
                                                         </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>3.</td>
@@ -559,6 +559,9 @@
                                                         <td>Pen Item</td>
                                                         <td>
                                                             <span class="badge bg-red">1 Units</span>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -569,6 +572,9 @@
                                                         <td>
                                                             <span class="badge bg-red">5 Units</span>
                                                         </td>
+                                                        <td>
+                                                            <input type="text" class="form-control">
+                                                        </td>
                                                     </tr>
                                                 </tbody></table>
                                         </div>
@@ -577,11 +583,88 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Save</button>
+                                <button type="button" class="btn btn-default">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
+                <div class="modal fade" id="retrievel-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="retrievel-modalLabel">Generate Retrieval Form</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-md-12">
+                                    <div class="box">
+                                        <!-- /.box-header -->
+                                        <div class="box-body no-padding">
+                                            <table class="table table-condensed">
+                                                <tbody><tr>
+                                                        <th style="width: 10px">#</th>
+                                                        <th>Request Number</th>
+                                                        <th>Department</th>
+                                                        <th>Status</th>
+                                                        <th>Detail</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>DD/F44/C001</td>
+                                                        <td>Department 1</td>
+                                                        <td>
+                                                            <div class="progress progress-xs progress-striped active">
+                                                                <div class="progress-bar progress-bar-success" style="width: 50%"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>DD/F44/C001</td>
+                                                        <td>Department 1</td>
+                                                        <td>
+                                                            <div class="progress progress-xs progress-striped active">
+                                                                <div class="progress-bar progress-bar-success" style="width: 50%"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>DD/F44/C001</td>
+                                                        <td>Department 1</td>
+                                                        <td>
+                                                            <div class="progress progress-xs progress-striped active">
+                                                                <div class="progress-bar progress-bar-success" style="width: 50%"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-sm btn-primary">Details</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                        </div>
+                                        <!-- /.box-body -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success">Generate Retrieval Form</button>
+                                <button type="button" class="btn btn-default">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- /.content-wrapper -->
 
