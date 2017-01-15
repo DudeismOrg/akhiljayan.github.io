@@ -19,6 +19,11 @@
         <!-- AdminLTE Skins. Choose a skin from the css/skins
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+        <style type="text/css">
+            .badge{
+                margin-right:10px;
+            }
+        </style>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -171,7 +176,7 @@
                             </a>
                         </li>
                         <li class="header">Department</li>
-                        <li class="active treeview">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-pie-chart"></i>
                                 <span>Employees</span>
@@ -180,7 +185,7 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="active">
+                                <li>
                                     <a href="e-request-form.html" title="New Requisite form. Request to buy Items">
                                         <i class="fa fa-circle-o"></i> 
                                         <span>Request Stationary Items</span>
@@ -195,7 +200,7 @@
                                         </span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="e-rejected-request.html" title="View all Rejected Requests">
                                         <i class="fa fa-circle-o"></i> 
                                         <span>Rejected Requests</span>
@@ -275,7 +280,7 @@
                             </ul>
                         </li>
                         <li class="header">Store</li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-pie-chart"></i>
                                 <span>Clerk</span>
@@ -301,8 +306,8 @@
                                             <span class="label label-primary pull-right" style="margin:0px">4</span>
                                         </span>
                                     </a></li>
-                                <li><a href="c-purchase-order.html"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
-                                <li><a href="c-delivery-order.html"><i class="fa fa-circle-o"></i> Delivery Order</a></li>
+                                <li class="active"><a href="c-purchase-order.html"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
+                                <li><a href="c-delivery-order.html"><i class="fa fa-circle-o"></i>  Delivery Order</a></li>
                                 <li><a href="c-monthly-stock-adjustment.html"><i class="fa fa-circle-o"></i> Monthly Stock Adjustment</a></li>
                                 <li><a href="c-onspot-adjustment.html"><i class="fa fa-circle-o"></i> On-spot Stock Adjustment</a></li>
                             </ul>
@@ -353,11 +358,11 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Request Form
+                        Place Purchase Order
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                        <li class="active">Request Stationary Item</li>
+                        <li class="active">Place Purchase Order</li>
                     </ol>
                 </section>
 
@@ -365,205 +370,202 @@
                 <section class="content">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="box box-primary">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">Requisition Form Number: DDS/111/99</h3>
+                            <div class="col-md-6">
+                                <h4 class="pull-left">Batch Number: 135</h4>
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box">
+                                <div class="box-header">
+
+                                    <div class="input-group input-group-sm pull-left" style="width: 150px;">
+                                        <input type="text" name="table_search" class="form-control pull-left" placeholder="Search">
+
+                                        <div class="input-group-btn">
+                                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="box-tools">
+                                        <a href="#" class="btn btn-primary">Add new Item to Order</a>
+                                        <!--                                        <ul class="pagination pagination-sm no-margin pull-right">
+                                                                                    <li><a href="#">«</a></li>
+                                                                                    <li><a href="#">1</a></li>
+                                                                                    <li><a href="#">2</a></li>
+                                                                                    <li><a href="#">3</a></li>
+                                                                                    <li><a href="#">»</a></li>
+                                                                                </ul>-->
+                                    </div>
                                 </div>
                                 <!-- /.box-header -->
-                                <!-- form start -->
-                                <form role="form">
-                                    <div class="box-body">
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
-                                                <div class="pull-left">
-                                                    <h3> Department: CS Department</h3>
-                                                    <span>Department Code: CSD</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="pull-right">
-                                                    <h3> Employee Name: Name</h3>
-                                                    <span>Employee Number: 123</span><br>
-                                                    <span>Employee Email: email@email.com</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="height:20px"></div>
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
-                                                <label>Pickup Location</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option>--Select Location--</option>
-                                                    <option>Location 1</option>
-                                                    <option>Location 2</option>
-                                                    <option>Location 3</option>
-                                                    <option>Location 4</option>
-                                                    <option>Location 5</option>
-                                                    <option>Location 6</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>Representative</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option>--Select Representative--</option>
-                                                    <option>Emp 1</option>
-                                                    <option>Emp 2</option>
-                                                    <option>Emp 3</option>
-                                                    <option>Emp 4</option>
-                                                    <option>Emp 5</option>
-                                                    <option>Emp 6</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="height:20px"></div>
-                                        <div class="col-md-12">
-                                            <div class="panel panel-primary">
-                                                <div class="panel-body">
-                                                    <div class="col-md-12">
-                                                        <div class="col-md-4">
-                                                            <label>Select Category</label>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <select class="form-control select2" style="width: 100%;">
-                                                                <option>--Select Category--</option>
-                                                                <option>Clip</option>
-                                                                <option>Envelop</option>
-                                                                <option>Exercise</option>
-                                                                <option>Pen</option>
-                                                                <option>Pad</option>
-                                                                <option>Pencil</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12" style="height:10px"></div>
-                                                    <div class="col-md-12">
-                                                        <div class="col-md-4">
-                                                            <label>Select Item</label>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <select class="form-control select2" style="width: 100%;">
-                                                                <option>--Select Item--</option>
-                                                                <option>Item 1</option>
-                                                                <option>Item 2</option>
-                                                                <option>Item 3</option>
-                                                                <option>Item 4</option>
-                                                                <option>Item 5</option>
-                                                                <option>Item 6</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12" style="height:10px"></div>
-                                                    <div class="col-md-12">
-                                                        <div class="col-md-4">
-                                                            <label>Quantity</label>
-                                                        </div>
-                                                        <div class="col-md-8">
-                                                            <div class="input-group">
-                                                                <input class="form-control" type="text" placeholder="Enter Quntity">
-                                                                <span class="input-group-addon">Unit(As per selected Item)</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="panel-footer" style="height:50px">
-                                                    <a class="pull-right btn btn-success">Add Item</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="height:20px"></div>
-                                        <div class="col-md-12">
-                                            <div class="box">
-                                                <div class="box-header">
-                                                    <h3 class="box-title">Selected Items</h3>
-                                                </div>
-                                                <!-- /.box-header -->
-                                                <div class="box-body no-padding">
-                                                    <table class="table table-condensed">
-                                                        <tbody><tr>
-                                                                <th style="width: 10px">#</th>
-                                                                <th>Item Code</th>
-                                                                <th>Category</th>
-                                                                <th>Item</th>
-                                                                <th>Qty</th>
-                                                                <th style="width: 40px">Remove</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>1.</td>
-                                                                <td>C001</td>
-                                                                <td>Clip</td>
-                                                                <td>Clip Double2</td>
-                                                                <td>
-                                                                    <span class="badge bg-red">5 Units</span>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="#">
-                                                                        <i class="fa fa-close" aria-hidden="true"></i>
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2.</td>
-                                                                <td>E001</td>
-                                                                <td>Envelop</td>
-                                                                <td>Envelop Item</td>
-                                                                <td>
-                                                                    <span class="badge bg-red">2 Units</span>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="#"><i class="fa fa-close" aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3.</td>
-                                                                <td>P001</td>
-                                                                <td>Pen</td>
-                                                                <td>Pen Item</td>
-                                                                <td>
-                                                                    <span class="badge bg-red">1 Units</span>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="#"><i class="fa fa-close" aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>4.</td>
-                                                                <td>C001</td>
-                                                                <td>Clip</td>
-                                                                <td>Clip Double1</td>
-                                                                <td>
-                                                                    <span class="badge bg-red">5 Units</span>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="#"><i class="fa fa-close" aria-hidden="true"></i></a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody></table>
-                                                </div>
-                                                <!-- /.box-body -->
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="height:20px"></div>
-                                        <div class="col-md-12">
-                                            <label>Remarks</label>
-                                            <div class="box-body pad">
-                                                <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                    <!-- /.box-body -->
-
-                                    <div class="box-footer">
-                                        <button type="submit" class="pull-right btn btn-danger" style="margin-left:5px">Cancel</button>
-                                        <button type="submit" class="pull-right btn btn-primary" style="margin-right:5px">Put Request</button>
-                                    </div>
-                                </form>
+                                <div class="box-body no-padding">
+                                    <table class="table">
+                                        <tbody><tr>
+                                                <th style="width: 10px"><input type="checkbox"></th>
+                                                <th style="width: 10px">#</th>
+                                                <th>Item Number</th>
+                                                <th>Category</th>
+                                                <th>Item</th>
+                                                <th>Reorder Quantity</th>
+                                                <th>Unit</th>
+                                                <th>Supplier & contact</th>
+                                                <th>Remove</th>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>1.</td>
+                                                <td>IT789</td>
+                                                <td>Cat 1</td>
+                                                <td>Item 1</td>
+                                                <td><input class="form-control" type="text" value="300"></td>
+                                                <td>Pax</td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option>A: Ms.Lane - 9765678</option>
+                                                        <option>B: Mr.Ron - 67543245</option>
+                                                        <option>C: Mr.Dio - 89087655</option>
+                                                    </select>
+                                                </td>
+                                                <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>2.</td>
+                                                <td>IT234</td>
+                                                <td>Cat 2</td>
+                                                <td>Item 2</td>
+                                                <td><input class="form-control" type="text" value="400"></td>
+                                                <td>Each</td>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option>A: Ms.Lane - 9765678</option>
+                                                        <option>B: Mr.Ron - 67543245</option>
+                                                        <option>C: Mr.Dio - 89087655</option>
+                                                    </select>
+                                                </td>
+                                                <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>3.</td>
+                                                <td>IT33</td>
+                                                <td>Cat 3</td>
+                                                <td>Item 3</td>
+                                                <td><input class="form-control" type="text" value="20"></td>
+                                                <td>Box</td>  
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option>A: Ms.Lane - 9765678</option>
+                                                        <option>B: Mr.Ron - 67543245</option>
+                                                        <option>C: Mr.Dio - 89087655</option>
+                                                    </select>
+                                                </td>
+                                                <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                            </tr>
+                                        </tbody></table>
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer">
+                                    <a href="#" class="btn btn-danger pull-right" style="margin-left:5px">Cancel</a>
+                                    <a href="#"  data-toggle="modal" data-target="#retrievel-modal" class="btn btn-success pull-right" style="margin-right:5px">Generate PO</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- /.content -->
+
+                <div class="modal fade" id="retrievel-modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" style="width:130%">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="retrievel-modalLabel">Purchase Order #PO123</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-md-12">
+                                    <div class="col-md-6">
+                                        <h4><u>Batch Number:</u> 135</h4>
+                                        <h4><u>Supplier Code:</u> Code</h4>
+                                        <h4><u>Supplier Name:</u> Name</h4>
+                                        <h4><u>Deliver To:</u> Logic University Stationary Store</h4>
+                                        <h4><u>Receiving Instruction:</u> Some Instruction</h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4><u>PO Date:</u> 13-01-2017</h4>
+                                        <h4><u>Supplier Contact:</u> Ms.Lane</h4>
+                                        <h4><u>Contact:</u> 98564345</h4>
+                                        <h4><u>Total PO Cost:</u> $2900</h4>
+                                        <h4><u>Expected Delivery Date:</u> 20-01-2017</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="box">
+                                        <!-- /.box-header -->
+                                        <div class="box-body no-padding">
+                                            <table class="table table-condensed">
+                                                <tbody><tr>
+                                                        <th style="width: 10px">#</th>
+                                                        <th>Item Number</th>
+                                                        <th>Category</th>
+                                                        <th>Item</th>
+                                                        <th>Reorder Quantity</th>
+                                                        <th>Unit</th>
+                                                        <th>Unit Cost</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>IT789</td>
+                                                        <td>Cat 1</td>
+                                                        <td>Item 1</td>
+                                                        <td><input class="form-control" type="text" value="300"></td>
+                                                        <td>Pax</td>
+                                                        <td>
+                                                            $34
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2.</td>
+                                                        <td>IT234</td>
+                                                        <td>Cat 2</td>
+                                                        <td>Item 2</td>
+                                                        <td><input class="form-control" type="text" value="400"></td>
+                                                        <td>Each</td>
+                                                        <td>
+                                                            $56
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3.</td>
+                                                        <td>IT33</td>
+                                                        <td>Cat 3</td>
+                                                        <td>Item 3</td>
+                                                        <td><input class="form-control" type="text" value="20"></td>
+                                                        <td>Box</td>  
+                                                        <td>
+                                                            $55
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                        </div>
+                                        <!-- /.box-body -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success">Submit for Approval</button>
+                                <button type="button" class="btn btn-default">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- /.content-wrapper -->
 

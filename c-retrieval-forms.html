@@ -296,7 +296,7 @@
                                         </span>
                                     </a>
                                 </li>
-                                <li><a href="c-retrieval-forms.html"><i class="fa fa-circle-o"></i> <span>Process Retrieval Forms</span>
+                                <li class="active"><a href="c-retrieval-forms.html"><i class="fa fa-circle-o"></i> <span>Process Retrieval Forms</span>
                                         <span class="pull-right-container">
                                             <span class="label label-primary pull-right" style="margin:0px">8</span>
                                         </span>
@@ -307,7 +307,7 @@
                                         </span>
                                     </a></li>
                                 <li><a href="c-purchase-order.html"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
-                                <li><a href="c-delivery-order.html"><i class="fa fa-circle-o"></i> Purchase Order</a></li>
+                                <li><a href="c-delivery-order.html"><i class="fa fa-circle-o"></i>  Delivery Order</a></li>
                                 <li><a href="c-monthly-stock-adjustment.html"><i class="fa fa-circle-o"></i> Monthly Stock Adjustment</a></li>
                                 <li><a href="c-onspot-adjustment.html"><i class="fa fa-circle-o"></i> On-spot Stock Adjustment</a></li>
                             </ul>
@@ -358,7 +358,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Process Requests
+                        Process Retrieval Forms
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
@@ -398,7 +398,7 @@
                                         <tbody><tr>
                                                 <th style="width: 10px">#</th>
                                                 <th style="text-align: center">Retrieval Id</th>
-                                                <th style="width: 250px; text-align: right">Action</th>
+                                                <th style="width: 250px; text-align: center">Action</th>
                                             </tr>
                                             <tr>
                                                 <td>1.</td>
@@ -450,11 +450,49 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="retrievel-modalLabel">Collect Items</h4>
+                                <h4 class="modal-title" id="retrievel-modalLabel">Retrieval Form Summery</h4>
                             </div>
                             <div class="modal-body">
                                 <div class="col-md-12">
                                     <div class="box">
+                                        <div class="box-header">
+                                            <h4>Requests related</h4>
+                                        </div>
+                                        <!-- /.box-header -->
+                                        <div class="box-body no-padding">
+                                            <table class="table table-condensed">
+                                                <tbody><tr>
+                                                        <th style="width: 10px">#</th>
+                                                        <th>Request Number</th>
+                                                        <th>Department</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>DD/343/F01</td>
+                                                        <td>Dept 1</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-sm btn-default">Details</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2.</td>
+                                                        <td>DD/343/F02</td>
+                                                        <td>Dept 2</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-sm btn-default">Details</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                        </div>
+                                        <!-- /.box-body -->
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="box">
+                                        <div class="box-header">
+                                            <h4>Total Measure to collect</h4>
+                                        </div>
                                         <!-- /.box-header -->
                                         <div class="box-body no-padding">
                                             <table class="table table-condensed">
@@ -495,7 +533,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success">Ready for Shipment</button>
+                                <button type="button" class="btn btn-success">Collected and Ready for Shipment</button>
                                 <button type="button" class="btn btn-default">Close</button>
                             </div>
                         </div>
